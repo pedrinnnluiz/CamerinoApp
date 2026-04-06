@@ -22,15 +22,15 @@ public partial class CadastroPage : ContentPage
 
 
         if(!EmailEntry.Text.Contains("@gmail.com")
-           || !EmailEntry.Text.Contains("hotmail.com")
-           ||  !EmailEntry.Text.Contains("@outlook.com "))
+           && !EmailEntry.Text.Contains("hotmail.com")
+           &&  !EmailEntry.Text.Contains("@outlook.com"))
         {
             await DisplayAlert("Alerta", "Seu email deve ter enderaçamento", "Ok");
             return;
         }
 
 
-        if (!(SenhaEntry.Text.Length < 8))
+        if (SenhaEntry.Text.Length < 8)  
         {
             await DisplayAlert("Alerta", " Sua senha deve conter 8 caracteres", "Ok"); 
             return;
@@ -39,6 +39,8 @@ public partial class CadastroPage : ContentPage
         {
             await DisplayAlert("Sucesso", "Cadastro feito com sucesso", "Ok");
         }
+
+        await Navigation.PushAsync(new SelecaoServico());
 
     }
 }

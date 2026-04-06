@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new CadastroPage();
+            MainPage = new NavigationPage (new CadastroPage());
         }
     }
 }
