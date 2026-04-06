@@ -6,7 +6,9 @@
     <VerticalStackLayout Spacing="20">
         <Label 
             Text="Bem vindo à Camerino"
-            VerticalOptions="Center"    
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
           />
 
         <Entry
@@ -19,5 +21,11 @@
             Placeholder="Cadastre uma senha "
            IsPassword="True"
             ></Entry>
+
+        <Button
+            x:Name="CadastrarClicked"
+            Text="Cadastrar"
+            Clicked="CadastrarClicked_Clicked"
+            ></Button>
     </VerticalStackLayout>
 </ContentPage>
